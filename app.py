@@ -12,7 +12,7 @@ def submit():
     try:
         data = request.get_json()
 
-        required_fields = ['name', 'email', 'title', 'description', 'dueDate']
+        required_fields = ['firstName', 'lastName', 'email', 'title', 'description', 'dueDate']
 
         if not all(field in data and data[field] for field in required_fields):
             return jsonify({"message": "Please fill in all fields."}), 400

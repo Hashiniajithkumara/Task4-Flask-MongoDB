@@ -1,0 +1,11 @@
+image: python:3.10
+
+stages:
+  - run
+
+run-job:
+  stage: run
+  script:
+    - echo "Running Python file"
+    - python app.py
+    
